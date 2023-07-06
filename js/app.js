@@ -47,28 +47,30 @@ const getWeather=  ()=>{
       );
       console.log()
       const wind = document.querySelector(".weather-details .wind span");
+      image.src = `https://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`
       switch (json.weather[0].main) {
         case "Clear":
-          image.src = "img/clear.png";
+          weatherBox.style.background = "linear-gradient(60deg, #00bd56 10%, #f9fd50 100%)";
           break;
         case "Rain":
-          image.src = "img/rain.png";
+          weatherBox.style.background = "linear-gradient(60deg, #335d6e 10%, #99bdda 100%)";
           break;
         case "Snow":
-          image.src = "img/snow.png";
+          weatherBox.style.backgroundColor = "linear-gradient(60deg, #dbeef0 10%, #577475 100%)";
           break;
         case "Clouds":
-          image.src = "img/cloud.png";
+          weatherBox.style.backgroundColor = "linear-gradient(60deg, #5f6080 10%, #81919e 100%)";
           break;
         case "Haze":
-          image.src = "img/mist.png";
+          weatherBox.style.backgroundColor = "linear-gradient(60deg, #bcbccf 10%, #613d68 100%)";
           break;
         case "Mist":
-          image.src = "img/mist.png";
+          weatherBox.style.backgroundColor = "linear-gradient(60deg, #bcbccfce 10%, #1a9a9e80 100%)";
           break;
         default:
-          image.src = "";
+          weatherBox.style.backgroundColor = "#0000FF";
       }
+
 
       temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
       description.innerHTML = `${json.weather[0].description}`;
