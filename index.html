@@ -9,20 +9,20 @@
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/app.js" defer></script>
+  <script src="js/app.js" type="module" defer></script>
   <title>WeatherApi</title>
 </head>
 
 <body>
+  <header><h1>WeatherApi</h1></header>
   <div class="container">
     <div class="search-box">
       <i class="fa-solid fa-location-dot"></i>
       <input type="text" placeholder="Enter your location">
       <button class="fa-solid fa-magnifying-glass"></button>
     </div>
-
     <div class="not-found">
-      <!--<img src="img/404.png" alt="Location not found">-->
+      <img src="img/404.jpg" alt="Location not found">
       <p>Invalid location</p>
     </div>
 
